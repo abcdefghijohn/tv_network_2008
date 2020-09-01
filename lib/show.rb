@@ -13,6 +13,14 @@ class Show
     end
   end
 
+  def actors
+    names = []
+    @characters.each do |character|
+      names << character.actor
+    end
+    names
+  end
+
   def highest_paid_actor
     actors_by_salary.last.actor
   end
