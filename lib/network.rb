@@ -28,9 +28,14 @@ class Network
     all_chars.flatten!
   end
 
-  #   def characters_by_show
-  #     @shows.map do |show|
-  #       show.characters
-  #     end
-  #   end
+  def actors_by_show
+      require "pry"; binding.pry
+    end
+  end
+
+  def characters_by_show
+    @shows.group_by do |show|
+      show.characters
+    end
+  end
 end
