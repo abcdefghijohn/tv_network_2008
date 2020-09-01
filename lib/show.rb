@@ -12,4 +12,14 @@ class Show
       character.salary
     end
   end
+
+  def highest_paid_actor
+    actors_by_salary.last.actor
+  end
+end
+
+def actors_by_salary
+  @characters.sort_by do |character|
+    character.salary
+  end
 end
